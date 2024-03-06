@@ -3,21 +3,6 @@ import pickle
 import numpy as np
 
 
-# Set custom theme
-custom_theme = """
-  [theme]
-base="light"
-backgroundColor="#52dac6"
-secondaryBackgroundColor="#bfdede"
-
-
-"""
-
-# Apply the custom theme
-st.set_page_config(page_title="Your App Title", page_icon="Business-Technology-Digital-High-Tech-World-Background.png", layout="centered", initial_sidebar_state="collapsed")
-
-
-
 def load_model():
     with open('Gb_mod_Salry.pkl', 'rb') as file:
         model = pickle.load(file)
