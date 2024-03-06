@@ -7,7 +7,9 @@ import numpy as np
 custom_theme = """
   [theme]
 base="light"
-backgroundColor="#10dec7"
+backgroundColor="#52dac6"
+secondaryBackgroundColor="#bfdede"
+
 
 """
 
