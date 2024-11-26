@@ -32,7 +32,7 @@ def show_predict_pg():
      
     
 
-    st.write("""##### Kindly enter details""")
+    #st.write("""##### Kindly enter details""")
 
    
 
