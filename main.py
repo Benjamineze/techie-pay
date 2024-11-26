@@ -12,9 +12,9 @@ Gb_mod = data['model']
 
 def show_predict_pg():
     st.markdown(
-    "<h1 style='color:grey; font-size: 24px; font-weight: bold; font-style: italic;'>💰 Techpro <span style='color:#BD7E58; font-size: 32px; font-weight: bold; font-style: italic;'>Salary App</h1>", 
-    unsafe_allow_html=True
-)
+        "<h1 style='color:grey; font-size: 24px; font-weight: bold; font-style: italic;'>💰 Techpro <span style='color:#BD7E58; font-size: 32px; font-weight: bold; font-style: italic;'>Salary App</h1>", 
+        unsafe_allow_html=True
+    )
 
     st.write("""###### Kindly enter details""")
 
