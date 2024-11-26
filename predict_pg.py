@@ -2,9 +2,6 @@ import streamlit as st
 import pickle
 import numpy as np
 
-
-
-
 def load_model():
     with open('Gb_mod_Salry.pkl', 'rb') as file:
         model = pickle.load(file)
@@ -19,22 +16,18 @@ le_Employment = data['le_Employment']
 le_Worktype = data['le_Worktype']
 
 variable_mappings = {
-        'OrgSize': {'2 to 9': 0, '10 to 19': 1, '20 to 99': 2, '100 to 499': 3, '500 to 999': 4, '1,000 to 4,999': 5,
-                    '5,000 to 9,999': 6, '10,000 & above': 7},
-        'WorkExp': {'0 to 5': 0, '6 to 10': 1, '11 to 15': 2, '16 to 20': 3, '21 to 25': 4, '26 to 30': 5, '31 & above': 6}
-    }
+    'OrgSize': {'2 to 9': 0, '10 to 19': 1, '20 to 99': 2, '100 to 499': 3, '500 to 999': 4, '1,000 to 4,999': 5,
+                '5,000 to 9,999': 6, '10,000 & above': 7},
+    'WorkExp': {'0 to 5': 0, '6 to 10': 1, '11 to 15': 2, '16 to 20': 3, '21 to 25': 4, '26 to 30': 5, '31 & above': 6}
+}
 
 def show_predict_pg():
-         st.markdown(
-            "<h1 style='color:grey; font-size: 24px; font-weight: bold; font-style: italic;'>💰 Techpro <span style='color:#BD7E58; font-size: 32px; font-weight: bold; font-style: italic;'>Salary App</h1>", 
-            unsafe_allow_html=True
-            )
-     
-    
+    st.markdown(
+        "<h1 style='color:grey; font-size: 24px; font-weight: bold; font-style: italic;'>💰 Techpro <span style='color:#BD7E58; font-size: 32px; font-weight: bold; font-style: italic;'>Salary App</h1>", 
+        unsafe_allow_html=True
+    )
 
-        st.write("""##### Kindly enter details""")
-
-   
+    st.write("""##### Kindly enter details""")
 
     Dev_Type = (
         "full-stack",
@@ -136,10 +129,7 @@ def show_predict_pg():
 
         Salary = Gb_mod.predict(user_input)
 
-
         formatted_salary = "{:,.0f}".format(Salary[0])
 
         # Output results
         st.subheader(f'The estimated Salary ${formatted_salary}')
-
-
