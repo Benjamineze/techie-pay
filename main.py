@@ -11,8 +11,12 @@ data = load_model()
 Gb_mod = data['model']
 
 def show_predict_pg():
-    st.write("""### Techpro Salary Prediction""")
-    st.write("""##### Kindly enter details""")
+    st.markdown(
+    "<h1 style='color:grey; font-size: 24px; font-weight: bold; font-style: italic;'>💰 Techpro <span style='color:#BD7E58; font-size: 32px; font-weight: bold; font-style: italic;'>Salary App</h1>", 
+    unsafe_allow_html=True
+)
+
+    st.write("""###### Kindly enter details""")
 
     variable_mappings = {
         'OrgSize': {'2 to 9': 0, '10 to 19': 1, '20 to 99': 2, '100 to 499': 3, '500 to 999': 4, '1,000 to 4,999': 5,
